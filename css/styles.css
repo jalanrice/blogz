@@ -56,6 +56,14 @@ hr {
     font-size: 12px;
 }
 
+.nav-link {
+  float: right;
+  width:160px;
+  margin:15px;
+  display:inline-block;
+  list-style: none;
+}
+
 nav ul {
     padding: 0;
     display: inline-block;
