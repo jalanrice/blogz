@@ -21,7 +21,9 @@ class BlogHandler(webapp2.RequestHandler):
         """
 
         # TODO - filter the query so that only posts by the given user
-        return None
+        query = Post.all().filter('author', self.user).order('-created')
+        return query.fetch(limit=limit, offset=offset)
+        #userposts = db.GqlQuery("SELECT * FROM Post WHERE author = ")
 
     def get_user_by_name(self, username):
         """ Get a user object from the db, based on their username """
